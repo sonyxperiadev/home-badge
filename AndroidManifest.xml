@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2016 Sony Mobile Communications Inc.
+    All rights, including trade secret rights, reserved.
+
+    This software may be distributed under the terms of the BSD license.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sonymobile"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!-- Needed to insert badges -->
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" />
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="23" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="BadgeApiUser"
+        android:theme="android:Theme.Light" >
+        <activity
+            android:name="com.example.sonymobile.BadgeInsertActivity"
+            android:label="BadgeApiUser" >
+
+            <!--
+                Intent filter using action MAIN and category LAUNCHER
+                must be specified for the activity associated with a badge
+            -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
