@@ -1,0 +1,20 @@
+.gitignore~
+
+# Log file
+*.log
+
+# Package Files #
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# gradle
+.gradle
+build
+build.gradle~
+
+# Android Studio
+.idea
+*.iml
+out/
